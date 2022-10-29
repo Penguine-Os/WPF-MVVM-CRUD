@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace models
 {
-    public abstract class BasisKlasse : IDataErrorInfo, INotifyPropertyChanged
+    public abstract class BasisKlasse : IDataErrorInfo/*, INotifyPropertyChanged*/
     {
         public abstract string this[string columnName] { get; }
 
-        public event PropertyChangedEventHandler? PropertyChanged;
+        //public event PropertyChangedEventHandler? PropertyChanged;
         public bool IsGeldig()
         {
             return string.IsNullOrWhiteSpace(Error);
